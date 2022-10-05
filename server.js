@@ -102,13 +102,13 @@ let connStr = "DATABASE="+process.env.DB_DATABASE+";HOSTNAME="+process.env.DB_HO
 
 })
 
-app.post('/getData', function(request, response){
+app.post('/getDatas', function(request, response){
   console.log('hi')
    ibmdb.open(connStr, function (err,conn) {
      if (err){
        return response.json({success:-1, message:err});
      }
-     conn.query("SELECT * FROM "+process.env.DB_SCHEMA+".HOME_SALES ORDER BY ID DESC LIMIT "+request.body.num+";", function (err, data) {
+     conn.query("SELECT * FROM "+process.env.DB_SCHEMA+".OPTIM_CUSTOMERS ORDER BY CUST_ID DESC LIMIT "+request.body.num+";", function (err, data) {
        if (err){
          return response.json({success:-1, message:err});
        }

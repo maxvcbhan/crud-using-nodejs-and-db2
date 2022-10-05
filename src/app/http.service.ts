@@ -31,6 +31,7 @@ export class HttpService {
 
   getDataFromDatabase(id) {
     console.log(environment.NODE_HOST)
+	  console.log(id);
     return this.http.post(environment.NODE_HOST + 'getData', { num: id }, this.httpOptions);
   }
 

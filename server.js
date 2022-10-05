@@ -19,8 +19,8 @@ app.use(function (req, res, next) {
     next();
 });
 
-
-const { WatsonMLScoringEndpoint } = require("watson-ml-model-utils");
+//
+// const { WatsonMLScoringEndpoint } = require("watson-ml-model-utils");
 
 
 var features = ['LOTAREA', 'BLDGTYPE', 'HOUSESTYLE', 'OVERALLCOND', 'YEARBUILT',
@@ -31,14 +31,14 @@ var features = ['LOTAREA', 'BLDGTYPE', 'HOUSESTYLE', 'OVERALLCOND', 'YEARBUILT',
        'GARAGECOND', 'POOLAREA', 'POOLQC', 'FENCE', 'MOSOLD', 'YRSOLD' ];
 
 
-let endpoint = new WatsonMLScoringEndpoint(features, {
-         servicePath: process.env.WML_SERVICEPATH,
-         username: process.env.WML_UID,
-         password: process.env.WML_PWD,
-         instanceId: process.env.WML_INSTANCEID,
-         modelId: process.env.WML_MODELID,
-         deploymentId: process.env.WML_DEPLOYMENTID
- });
+// let endpoint = new WatsonMLScoringEndpoint(features, {
+//          servicePath: process.env.WML_SERVICEPATH,
+//          username: process.env.WML_UID,
+//          password: process.env.WML_PWD,
+//          instanceId: process.env.WML_INSTANCEID,
+//          modelId: process.env.WML_MODELID,
+//          deploymentId: process.env.WML_DEPLOYMENTID
+//  });
 
 var NodeGeocoder = require('node-geocoder');
 

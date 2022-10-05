@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8888/getData",
+			"name": "http://localhost:8888/getDatas",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -20,7 +20,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8888/getData",
+					"raw": "http://localhost:8888/getDatas",
 					"protocol": "http",
 					"host": [
 						"localhost"

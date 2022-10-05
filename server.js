@@ -9,6 +9,8 @@ var path=require('path');
 var bodyParser=require('body-parser');
 const ibmdb = require('ibm_db');
 const async = require('async');
+const cors=require("cors");
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(function (req, res, next) {

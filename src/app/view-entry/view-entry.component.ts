@@ -4,7 +4,6 @@ import { HttpService } from '../http.service';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { HouseInfo } from '../models/house-info';
 import { AddressInfo } from '../models/address-info';
-import { MapsAPILoader } from '@agm/core';
 import { faImage, faClock, faBed, faCar, faBuilding, faDoorOpen, faFire, faHome, faSwimmer, faBath } from '@fortawesome/free-solid-svg-icons';
 library.add(faImage, faClock, faDoorOpen, faFire,faHome, faBuilding, faCar, faBed, faSwimmer,faBath);
 
@@ -30,7 +29,7 @@ export class ViewEntryComponent implements OnInit {
     public position: string;
 
 
-  constructor(private router:Router, private httpService:HttpService, private activaterouter:ActivatedRoute, private mapLoader: MapsAPILoader) {
+  constructor(private router:Router, private httpService:HttpService, private activaterouter:ActivatedRoute) {
     this.rowID = '';
     this.addressModel = new AddressInfo('', '', '', '', '', '');
     this.data = [];
@@ -57,11 +56,11 @@ export class ViewEntryComponent implements OnInit {
       if(data['success'] != 1){
         console.log(data['message']);
       } else {
-        this.data = data['data'][0];        
+        this.data = data['data'][0];
         this.data2 = data['data2'][0];
 
         var geo = this.httpService.getCoordinates(this.data2['ADDRESS1'], this.data2['CITY'],this.data2['STATE'],this.data2['ZIPCODE']);
-        geo.subscribe(data => {          
+        geo.subscribe(data => {
           if (data['success'] != 1){
             console.log(data['message']);
           }

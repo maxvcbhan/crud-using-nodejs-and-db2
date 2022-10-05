@@ -6,7 +6,6 @@ import { HttpService }  from '../http.service';
 import { PredictHouseInfo } from '../models/predict-house-info';
 import { AddressInfo } from '../models/address-info';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import {  MapsAPILoader }  from '@agm/core';
 import { faImage, faClock, faBed, faCar, faBuilding, faDoorOpen, faFire, faHome, faSwimmer, faBath } from '@fortawesome/free-solid-svg-icons';
 library.add(faImage, faClock, faDoorOpen, faFire,faHome, faBuilding, faCar, faBed, faSwimmer,faBath);
 

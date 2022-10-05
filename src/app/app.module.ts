@@ -4,7 +4,7 @@ import { HttpService } from './http.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { AgmCoreModule } from '@agm/core';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,9 +34,9 @@ import { ViewEntryComponent } from './view-entry/view-entry.component';
     AppRoutingModule,
      FormsModule,
      FontAwesomeModule,
-     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAM0KXiz3xTv9KAvnOIdm5J0Agnwp3_lOI'
-    })
+    //  AgmCoreModule.forRoot({
+    //   apiKey: 'AIzaSyAM0KXiz3xTv9KAvnOIdm5J0Agnwp3_lOI'
+    // })
   ],
    providers: [HttpService],
   bootstrap: [AppComponent]

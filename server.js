@@ -60,7 +60,9 @@ let connStr = "DATABASE="+process.env.DB_DATABASE+";HOSTNAME="+process.env.DB_HO
 
 
 //let connStr = "DATABASE=BLUDB;HOSTNAME=db2whoc-flex-zipnqsp.services.au-syd.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=bluadmin;PWD=zWG@U4q1uFpDTi0v8jVBDI7_PtSr0;";
-
+ app.get('/live', function(req, res){
+  return "alive"
+ })
  app.post('/newDataEntry', function(request, response){
    var house = JSON.parse(request.body['house']);
 

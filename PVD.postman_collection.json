@@ -27,7 +27,7 @@
 					],
 					"port": "8888",
 					"path": [
-						"getData"
+						"getDatas"
 					]
 				}
 			},

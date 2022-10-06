@@ -36,7 +36,8 @@
     "node-geocoder": "^4.2.0",
     "nodemon": "^2.0.20",
     "rxjs": "~7.5.7",
-    "tslib": "^2.4.0",
+    "pm2": "5.2.0",
+    "tslib":"^2.4.0",
     "watson-ml-model-utils": "0.0.3",
     "zone.js": "~0.11.8"
   },
